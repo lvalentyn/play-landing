@@ -1,0 +1,34 @@
+.overlay 
+    .modal#reg
+        .modal__close 
+            | &times;
+        .modal__title
+            | Create account
+        form.modal__form
+            input(name="name" type="text" placeholder="Username")
+            input(name="email" type="email" placeholder="Email")
+            input(name="pass" type="pass" placeholder="Password")
+            .modal__btns
+                button.btn.btn__register
+                    | Register
+                .modal__links
+                    a(href="#").modal__acc 
+                        | Have Account?
+                    a(href="#").modal__log 
+                        | Login Here
+    .modal#sign
+        .modal__close 
+            | &times;
+        .modal__title 
+            | Sign in
+        form.modal__form
+            input(name="name" type="text" placeholder="Username or email")
+            input(name="pass" type="pass" placeholder="Password")
+            .modal__btns
+                button.btn.btn__login
+                    | Login
+                .modal__links
+                    a(href="#").modal__acc 
+                        | No Account?
+                    a(href="#").modal__log 
+                        | Register Here
