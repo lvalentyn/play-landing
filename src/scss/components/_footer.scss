@@ -296,17 +296,5 @@
     &__copyright {
         font-size: 1.3rem;
         color: rgb(162, 143, 178);
-        @media (min-width: 769px) {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        @media (min-width: 1600px) {
-            position: relative;
-            bottom: 0;
-            left: 0;
-            transform: translateX(0%);
-        }
     }
 }

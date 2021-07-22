@@ -47,6 +47,37 @@ $(document).ready(function () {
         cssEase: 'ease'
     });
     $('.slick-dots button').html('')
+    // modals
+    $('#register').on('click', function () {
+        $('.overlay, #reg').fadeIn('slow');
+    });
+    $('#login').on('click', function () {
+        $('.overlay, #sign').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function () {
+        $('.overlay, #reg, #sign').fadeOut('slow');
+    });
+    $('form').submit(function (index) {
+        e.preventDefault();
+    });
+    // плавная прокрутка
+    $("a[href]").click(function () {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+    // sidebar
+    $(window).scroll(function () {
+        if (this.scrollY > 1800) {
+            $('.deal').addClass('deal_sticky');
+            $('.deal').fadeIn();
+        } else {
+            $('.deal').removeClass('deal_sticky');
+            $('.deal').fadeOut();
+        }
+
+
+    });
     // Tabs header
     const tabContent = document.querySelectorAll('.topgames__content'),
         tabsWrapper = document.querySelector('.topgames__tabs'),
@@ -78,42 +109,25 @@ $(document).ready(function () {
             })
         }
     });
-    // modals
-    $('#register').on('click', function () {
-        $('.overlay, #reg').fadeIn('slow');
+
+    /* burgermenu */
+    const menu = document.querySelector('.header__menu'),
+        navLinks = document.querySelectorAll('.header__link'),
+        btns = document.querySelector('.header__btns'),
+        logo = document.querySelector('.header__logo'),
+        hamburger = document.querySelector('.header__burger');
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('header__menu_active');
+        btns.classList.toggle('header__btns_active');
+        logo.classList.toggle('header__logo_hide');
     });
-    $('#login').on('click', function () {
-        $('.overlay, #sign').fadeIn('slow');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.toggle('header__menu_active');
+            btns.classList.toggle('header__btns_active');
+            logo.classList.toggle('header__logo_hide');
+        })
     });
-    $('.modal__close').on('click', function () {
-        $('.overlay, #reg, #sign').fadeOut('slow');
-    });
-    $('form').submit(function (e) {
-        e.preventDefault();
-    });
-    // плавная прокрутка
-    $("a[href]").click(function () {
-        const _href = $(this).attr("href");
-        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-        return false;
-    });
-    // burger menu
-    const miniNav = () => {
-        const burger = document.querySelector('.header__burger');
-        const nav = document.querySelector('.header__menu');
-        const navLinks = document.querySelectorAll('.header__item');
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('header__menu_active');
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `burgerFade 0.5s ease forwards ${index / 7 + 0.4}s`;
-                }
-            });
-        });
-    };
-    miniNav();
     // Timer footer
     const deadline = '2021-08-10';
     function getTimeRemaining(endtime) {
@@ -157,6 +171,7 @@ $(document).ready(function () {
         }
     }
     setClock('.deal__timer', deadline);
+
     // Animations
     const animItems = document.querySelectorAll('._anim-items');
     if (animItems.length > 0) {

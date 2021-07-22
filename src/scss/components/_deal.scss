@@ -1,13 +1,16 @@
 .deal {
     padding: 36px 0 40px;
     @media (min-width: 1600px) {
-        padding: 0;
-        position: fixed;
-        top: 100px;
-        right: calc(50% - 590px);
-        transform: translateX(50%);
-        background-color: #18151a;
-        z-index: 111;
+        &_sticky {
+            padding: 0;
+            position: fixed;
+            top: -30px;
+            right: calc(50% - 590px);
+            transform: translateX(50%);
+            background-color: #18151a;
+            z-index: 111;
+            display: none;
+        }
     }
     .container {
         @media (min-width: 640px) {
