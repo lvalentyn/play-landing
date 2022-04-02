@@ -1,0 +1,166 @@
+@import '../../scss/vars';
+
+.navbar {
+	z-index: 100;
+
+	&__row {
+		display: flex;
+		width: 100%;
+		z-index: 1000;
+
+		&--top {
+			justify-content: space-between;
+			align-items: center;
+			padding: 12px 0;
+		}
+	}
+
+	&__logo {
+		&-img {
+			display: flex;
+		}
+	}
+
+	&__link {
+		display: inline-block;
+		width: 100%;
+		font-size: 18px;
+		font-weight: 700;
+		color: inherit;
+		text-decoration: none;
+		text-transform: capitalize;
+
+		transition: .3s ease;
+	}
+
+	&__el {
+		&:hover {
+			.navbar__link {
+				color: $hover-color;
+			}
+		}
+	}
+
+	&__btn-box {
+		display: flex;
+		width: 100%;
+		max-width: 330px;
+
+		.btn {
+			width: 45%;
+
+			&:first-child {
+				width: 55%;
+				margin-right: 10px;
+			}
+		}
+	}
+
+
+	@include respond-from(to-md) {
+		&__row {
+			position: relative;
+
+			&--bottom {
+				position: absolute;
+				flex-direction: column;
+				height: calc(100vh - 65px);
+
+				margin-left: -$container-padding;
+				padding: 0 $container-padding;
+
+				background-color: $bg-alt-color;
+
+				transform: translateY(100%);
+				opacity: 0;
+				transition: .5s ease;
+
+
+				&.open {
+					transform: translateY(0%);
+					opacity: 1;
+				}
+			}
+		}
+
+		&__burger {
+			display: flex;
+			align-items: center;
+
+			cursor: pointer;
+		}
+
+		&__list {
+			padding: 40px 0;
+		}
+
+		&__el {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+
+	@include respond-from(md) {
+		&__row {
+			&--top {
+				padding: 17.5px 0;
+				border-bottom: 1px solid #433c48;
+			}
+
+			&--bottom {
+				padding: 27.5px 0;
+				align-items: center;
+			}
+		}
+
+		&__navigation {
+			width: 100%;
+		}
+
+		&__list {
+			display: flex;
+		}
+
+		&__el {
+			&:not(:last-child) {
+				margin-right: 5%;
+			}
+		}
+
+		&__search {
+			position: relative;
+			width: 100%;
+			height: 54px;
+			max-width: 410px;
+			margin-right: 15px;
+			margin-left: auto;
+		}
+
+		&__search-field {
+			width: 100%;
+			height: 100%;
+			padding: 15px 10px 15px 75px;
+			color: $main-color;
+			font-size: 16px;
+			background-color: $bg-alt-color;
+
+			&::placeholder {
+				color: $alt-color;
+			}
+		}
+
+		&__search-btn {
+			position: absolute;
+			top: 50%;
+			left: 27px;
+			transform: translateY(-50%);
+			cursor: pointer;
+		}
+
+		&__search-icon___ {
+			display: block;
+		}
+	}
+}

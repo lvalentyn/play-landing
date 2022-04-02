@@ -1,0 +1,31 @@
+- const menuList =['home', 'about', 'games', 'news', 'contacts', `terms and conditions of use`, 'secure payment']
+
+section.navbar
+	.container
+		.navbar__row.navbar__row--top
+			.navbar__logo
+				a.navbar__logo-link(href="/" aria-label='main-logo')
+					img.navbar__logo-img(src="@img/logo-mob.png" alt="logoMob")
+			form(action="").navbar__search.none-to-md
+				input(type="text" placeholder="Search game...").navbar__search-field
+				button(type="submit").navbar__search-btn
+					span.navbar__search-icon___
+						img(src="@img/i-loupe.png", alt="loupe")
+			.navbar__btn-box.none-to-md
+				a.navbar__btn.btn(href="/")
+					span Register
+				a.navbar__btn.btn.btn--alt(href="/")
+					span Login
+			.navbar__burger.js-burger-btn.none-md
+				img(src="@img/i-burger.png" alt="burgermenu")
+		.navbar__row.navbar__row--bottom.js-burgermenu
+			nav.navbar__navigation
+				ul.navbar__list
+					each link in menuList
+						li.navbar__el
+							a.navbar__link(href=link aria-label="menu link") #{link}
+			.navbar__btn-box.none-md
+				a.navbar__btn.btn(href="/" aria-label="Register btn")
+					span Register
+				a.navbar__btn.btn.btn--alt(href="/" aria-label="Login btn")
+					span Login
