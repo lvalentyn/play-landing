@@ -21,11 +21,14 @@ $font-size-desk: 42;
 
 /*--------------- colors -------------*/
 $main-color: #fff;
+$sec-color: #c4b2d3;
 $alt-color: #867594;
 $hover-color: #ffb400;
 
 $bg-color: #252129;
 $bg-alt-color: #18151a;
+
+$border-color: #9c60d7;
 
 /*--------------- media -------------*/
 $first-point: 568px; //xxs
@@ -147,6 +150,12 @@ $sixth-point: 1440px; //lg
 
 	@else if $point==full {
 		@media only screen and (min-width: $container-width) {
+			@content;
+		}
+	}
+
+	@else if $point==to-full {
+		@media only screen and (max-width: ($container-width - 1px)) {
 			@content;
 		}
 	}

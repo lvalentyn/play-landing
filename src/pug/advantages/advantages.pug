@@ -1,0 +1,26 @@
+mixin card(props={})
+	.advantages__card
+		.advantages__icon 
+			img(src=`@img/${props.icon}.png`, alt=`${props.title}`)
+		.advantages__text
+			.advantages__title #{props.title}
+			.advantages__descr #{props.descr}
+
+section.advantages
+	.container 
+		.advantages__box
+			+card({
+				icon: 'advanatges-i-fast',
+				title: 'Free Delivery',
+				descr: 'Free Shipping On All Order  lorem ipsum dolor sit amet, consectetuer adipiscing elit'
+			})
+			+card({
+				icon: 'advanatges-i-money',
+				title: 'Free Delivery',
+				descr: 'Back Guarantee in 7 days dolor sit amet, consectetuer adipiscing elit'
+			})
+			+card({
+				icon: 'advanatges-i-discount',
+				title: 'Member Discount',
+				descr: 'On every order over $130.00  consectetuer '
+			})
