@@ -25,10 +25,18 @@ $sec-color: #c4b2d3;
 $alt-color: #867594;
 $hover-color: #ffb400;
 
+$price-color: #ff6c84;
+
 $bg-color: #252129;
 $bg-alt-color: #18151a;
 
 $border-color: #9c60d7;
+
+$star-color:#ffb400;
+
+@function svg-color($color) {
+	@return '%23'+str-slice('#{$color}', 2, -1);
+}
 
 /*--------------- media -------------*/
 $first-point: 568px; //xxs

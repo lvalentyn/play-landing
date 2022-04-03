@@ -56,12 +56,12 @@
 		}
 	}
 
-
 	@include respond-from(to-md) {
 		&__row {
 			position: relative;
 
 			&--bottom {
+
 				position: absolute;
 				flex-direction: column;
 				height: calc(100vh - 65px);
@@ -71,13 +71,13 @@
 
 				background-color: $bg-alt-color;
 
-				transform: translateY(100%);
+				transform: translateX(-100%);
 				opacity: 0;
 				transition: .5s ease;
 
 
 				&.open {
-					transform: translateY(0%);
+					transform: translateX(0%);
 					opacity: 1;
 				}
 			}

@@ -1,0 +1,151 @@
+mixin card(props={})
+	.games-box__card
+		.games-box__img-box
+			img(src=`@img/${props.img}`, alt=props.title)
+			.games-box__hover-box 
+				.games-box__btn-box 
+					a.games-box__btn.btn.btn--alt(href="/" aria-label="read-morew btn")
+						span read more
+					a.games-box__btn.btn(href="/" aria-label="buy-now btn")
+						span buy now
+			if(props.discount)
+				.games-box__discount 
+					span #{props.discount.val}
+		.games-box__text-box 
+			p.games-box__title #{props.title}
+			.games-box__info
+				.games-box__wrap
+					.games-box__rating
+						.rating
+							.rating__star
+							.rating__star
+							.rating__star
+							.rating__star
+							.rating__star.rating__star--empty
+					.games-box__price-box 
+						if(props.oldprice)
+							p.games-box__price.games-box__price--old $#{props.oldprice.price}
+						p.games-box__price $#{props.price}
+				.games-box__line
+				p.games-box__descr #{props.descr}
+
+section.games-box 
+	ul.games-box__menu.js-filter-menu
+		li.games-box__el.js-filter-tab.active All
+		li.games-box__el.js-filter-tab advanture
+		li.games-box__el.js-filter-tab racing & flying
+	.games-box__content-box.js-filter-content 
+		.js-game-box-slider
+			+card({
+				discount: {
+					val: '-30%'
+				},
+				img: 'games-box-ratchet.jpg',
+				title: 'Ratchet & Clank: Rift Apart',
+				oldprice: {
+					price: '62.02'
+				},
+				price: '40.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention...'
+			})
+			+card({
+				discount: {
+					val: '-50%'
+				},
+				img: 'games-box-horizon.jpg',
+				title: 'Horizon Forbidden West',
+				oldprice: {
+					price: '282.02'
+				},
+				price: '140.95',
+				descr: 'Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment....'
+			})
+			+card({
+				img: 'games-box-sackboy.jpg',
+				title: 'Sackboy: A Big Adventure',
+				price: '85.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+			+card({
+				img: 'games-box-sackboy.jpg',
+				title: 'Sackboy: A Big Adventure',
+				price: '85.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+	.games-box__content-box.js-filter-content 
+		.js-game-box-slider
+			+card({
+				discount: {
+					val: '-30%'
+				},
+				img: 'games-box-ratchet.jpg',
+				title: 'Ratchet & Clank: Rift Apart',
+				oldprice: {
+					price: '62.02'
+				},
+				price: '40.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention...'
+			})
+			+card({
+				discount: {
+					val: '-50%'
+				},
+				img: 'games-box-horizon.jpg',
+				title: 'Horizon Forbidden West',
+				oldprice: {
+					price: '282.02'
+				},
+				price: '140.95',
+				descr: 'Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment....'
+			})
+			
+	.games-box__content-box.js-filter-content 
+		.js-game-box-slider
+			+card({
+				img: 'games-box-sackboy.jpg',
+				title: 'Sackboy: A Big Adventure',
+				price: '85.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})
+			+card({
+				img: 'games-box-crash.jpg',
+				title: "Crash Bandicoot 4 - It's About Time",
+				price: '240.95',
+				descr: 'For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.'
+			})

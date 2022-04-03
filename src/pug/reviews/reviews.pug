@@ -1,0 +1,20 @@
+mixin slide(props={})
+	.reviews__slide
+		.reviews__bg
+			picture
+				source(media="(min-width: 567px)" srcset="@img/reviews-bg.jpg")
+				img(src="@img/reviews-bg-mob.jpg" alt="banner-bg-mob")
+		.container
+			.reviews__text-box
+				.reviews__img
+					img(src="@img/reviews-photo.jpg" alt="reviews-photo")
+				p.reviews__title horizon 
+				p.reviews__descr Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.
+				p.reviews__descr Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.
+			
+
+section.reviews
+	.reviews__slider.js-reviews-slider
+		+slide
+		+slide
+		+slide
