@@ -1,6 +1,7 @@
 import * as flsFunction from "./modules/functions.js";
 import burger from "./modules/burger.js";
 import filter from "./modules/filter.js";
+import timer from "./modules/timer.js";
 import slick from 'slick-carousel';
 import $ from "jquery";
 // plugins from npm
@@ -10,6 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// my modules
 	filter();
+	timer();
 	burger('.js-burgermenu', '.js-burger-btn');
 
 	// slick

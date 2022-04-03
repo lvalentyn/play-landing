@@ -1,0 +1,40 @@
+section.deal
+    .deal__discount 
+        span -70%
+    .deal__title Deal of the day
+    .deal__img-box
+        picture
+            source(media="(min-width: 567px)" srcset="@img/deal-bg-desk.jpg")
+            img(src="@img/deal-bg-mob.jpg" alt="deal-bg-mob")
+    .deal__text-box 
+        p.deal__subtitle Watch Dogs: Legion
+        .deal__info
+            .deal__wrap
+                .deal__rating
+                    .rating
+                        .rating__star
+                        .rating__star
+                        .rating__star
+                        .rating__star
+                        .rating__star.rating__star--empty
+                .deal__price-box 
+                    p.deal__price.deal__price--old $100.02
+                    p.deal__price $30.95
+            .deal__line
+            p.deal__descr For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.
+    .deal__timer
+        .deal__item
+            span#days 12
+            span days
+        .deal__item
+            span#hours 20
+            span hours
+        .deal__item
+            span#mins 56
+            span mins
+        .deal__item
+            span#secs 20
+            span secs
+    .deal__btn-box
+        a.deal__btn.btn(href="/" aria-label="buy-now btn")
+            span but now

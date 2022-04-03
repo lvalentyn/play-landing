@@ -73,6 +73,7 @@ body {
 	}
 }
 
+
 p,
 ul,
 input,
@@ -115,17 +116,141 @@ form {
 	&--alt {
 		background-image: linear-gradient(0deg, rgb(130, 93, 230) 0%, rgb(188, 101, 196) 100%);
 	}
+}
 
+.h2,
+.h3 {
+	margin: 0 0 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.h2 {
+	font-size: 24px;
+}
+
+.h3 {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-box {
+
+	p,
+	ul {
+		padding-bottom: 20px;
+		margin: -3px 0;
+		font-size: 16px;
+		line-height: 26px;
+		color: $sec-color;
+	}
+
+	ul {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.btn {
+		margin-bottom: 20px;
+		max-width: 188px;
+	}
+
+	img {
+		width: 100%;
+		max-width: 640px;
+		margin-bottom: 20px;
+	}
+
+
+}
+
+.section-bg {
+	background-color: $bg-alt-color;
+}
+
+.p-t-b {
+	padding: 40px 0;
+}
+
+.p-top {
+	padding-top: 40px;
+}
+
+.no-p {
+	padding: 0 !important;
+}
+
+@include respond-from(sm) {
+	.text-box {
+		img {
+			max-width: 40%;
+			margin-right: 20px;
+			float: left;
+		}
+
+		.float-right {
+			margin-right: 0;
+			margin-left: 20px !important;
+			float: right !important;
+		}
+	}
+
+	.p-t-b {
+		padding: 60px 0;
+	}
+
+	.p-top {
+		padding-top: 60px;
+	}
+}
+
+@include respond-from(to-md) {
+	aside.columns__item {
+		padding-top: 20px;
+	}
+
+	.none-to-md {
+		display: none !important;
+	}
 }
 
 @include respond-from(md) {
 	.none-md {
 		display: none !important;
 	}
+
+	.columns {
+		display: flex;
+
+		&__item {
+			&:first-child {
+				flex: 1 0 auto;
+				width: calc(100% - 360px);
+				padding-right: 15px;
+			}
+		}
+
+		&__sticky {
+			position: sticky;
+			top: 20px;
+			transition: all .2s;
+		}
+	}
 }
 
-@include respond-from(to-md) {
-	.none-to-md {
-		display: none !important;
+@include respond-from(lg) {
+	.p-t-b {
+		padding: 90px 0;
+	}
+
+	.p-top {
+		padding-top: 90px;
 	}
 }
