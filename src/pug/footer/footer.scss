@@ -1,1 +1,258 @@
 @import '../../scss/vars';
+
+.footer {
+	position: relative;
+	padding: 40px 0;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__col {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		font-size: 16px;
+		margin-bottom: 10px;
+		color: $hover-color;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__descr {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link,
+	&__contact-link {
+		color: $main-color;
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 30px;
+
+		&:hover {
+			color: $hover-color;
+		}
+	}
+
+	&__contact-link {
+		display: flex;
+	}
+
+	&__icon {
+		flex: 0 0 20px;
+		width: 20px;
+		height: 20px;
+		margin-right: 10px;
+
+		img {
+			margin-top: 5px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		&:last-child {
+			width: 20px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 26px;
+	}
+
+	&__form {
+		display: flex;
+		margin-bottom: 25px;
+	}
+
+	&__input {
+		width: 60%;
+		background: $bg-alt-color;
+		color: $main-color;
+		font-size: 14px;
+		padding: 0 15px;
+
+		&::placeholder {
+			color: $sec-color;
+		}
+	}
+
+	&__btn {
+		width: 40%;
+		max-width: 137px;
+		font-size: 14px;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	&__social-icon {
+		flex: 0 0 20px;
+		width: 20px;
+		height: 21px;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__copyright {
+		font-size: 13px;
+		line-height: 26px;
+		color: $sec-color;
+	}
+
+	@include respond-from(sm) {
+		padding: 60px 0;
+
+		&__container {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__col {
+			&:not(:last-child) {
+				margin-right: 40px;
+			}
+		}
+	}
+
+	@include respond-from(to-md) {
+		&__title {
+			&--accordion {
+				position: relative;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+
+				&::after {
+					content: '';
+					width: 14px;
+					height: 8px;
+					margin-left: 15px;
+					margin-bottom: 2px;
+					background: url('@img/footer-arrow.png') center center/cover no-repeat;
+					transition: .3s ease;
+				}
+
+				&.active {
+					&::after {
+						transform: rotate(180deg);
+					}
+				}
+			}
+
+		}
+
+		&__descr {
+			&--accordion {
+				max-height: 0;
+				opacity: 0;
+				transition: .3s ease;
+				overflow: hidden;
+
+				&.active {
+					overflow: visible;
+					opacity: 1;
+					// padding: 3rem 4rem;
+					// margin-top: 1rem;
+				}
+			}
+
+		}
+	}
+
+	@include respond-from(md) {
+		&__container {
+			justify-content: space-between;
+		}
+
+		&__title {
+
+			&--accordion {
+
+				pointer-events: none;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@include respond-from(xl) {
+		&__container {
+			position: relative;
+			flex-wrap: nowrap;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 40px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: rgba(255, 255, 255, .2);
+			}
+		}
+
+		&__col {
+			flex-basis: 100%;
+
+			&:nth-child(1) {
+				order: 2;
+			}
+
+			&:nth-child(2) {
+				order: 3;
+			}
+
+			&:nth-child(3) {
+				order: 1;
+			}
+
+			&:nth-child(4) {
+				order: 4;
+			}
+		}
+
+		&__title {
+			margin-bottom: 40px;
+		}
+	}
+
+	@include respond-from(lg) {
+		padding: 90px 0;
+
+	}
+}

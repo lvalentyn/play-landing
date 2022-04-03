@@ -1,2 +1,55 @@
 footer.footer 
-	
+	.footer__bg
+		picture
+			source(media="(min-width: 567px)" srcset="@img/footer-bg-desk.jpg")
+			img(src="@img/footer-bg-mob.png" alt="footer-bg")
+	.container 
+		.footer__container
+			.footer__col
+				.footer__title menu
+				.footer__descr
+					a.footer__link(href="/" aria-label="menu link") Delivery
+					a.footer__link(href="/" aria-label="menu link") Legal Notice
+					a.footer__link(href="/" aria-label="menu link") Terms and conditions of use
+					a.footer__link(href="/" aria-label="menu link") About us
+					a.footer__link(href="/" aria-label="menu link") Secure payment
+			.footer__col
+				.footer__title.footer__title--accordion.js-accordion-btn.active USEFUL LINKS
+				.footer__descr.footer__descr--accordion.active
+					a.footer__link(href="/" aria-label="menu link") Hot Trending
+					a.footer__link(href="/" aria-label="menu link") Our Store
+					a.footer__link(href="/" aria-label="menu link") New Arrival
+					a.footer__link(href="/" aria-label="menu link") Best Seller
+					a.footer__link(href="/" aria-label="menu link") Order Tracking
+					a.footer__link(href="/" aria-label="menu link") Warranty and Services
+			.footer__col
+				.footer__title.footer__title--accordion.js-accordion-btn.active Contact INFO & PAYMENT
+				.footer__descr.footer__descr--accordion.active
+					a.footer__contact-link(href="/" aria-label="location link")
+						.footer__icon
+							img(src="@img/footer-i-location.png", alt="location")
+						.footer__contact Game Store 507-Union Trade ipsum Doler Centre UK
+					a.footer__contact-link(href="tel:+387897897897" aria-label="phone link")
+						.footer__icon
+							img(src="@img/footer-i-phone.png", alt="phone")
+						.footer__contact +38 789-789-7897
+					a.footer__contact-link(href="mailto:sales@yourcompany.com" aria-label="e-mail link")
+						.footer__icon
+							img(src="@img/footer-i-email.png", alt="email")
+						.footer__contact sales@yourcompany.com		
+			.footer__col
+				.footer__title Our Newsletter
+				.footer__descr
+					p.footer__text But now the title has been confirmed as an early release to show off the technical capabilities of the PS5 by continuing Aloy's critically acclaimed storyline.
+					form(action="").footer__form
+						input(type="text" placeholder="Your email...").footer__input
+						button(type="submit").footer__btn.btn subscribe
+					.footer__wrap 
+						.footer__social
+							a.footer__social-icon(href="/" aria-label="menu link")
+								img(src="@img/footer-i-facebook.png", alt="facebook")
+							a.footer__social-icon(href="/" aria-label="menu link")
+								img(src="@img/footer-i-twitter.png", alt="twitter")
+							a.footer__social-icon(href="/" aria-label="menu link")
+								img(src="@img/footer-i-linkedin.png", alt="linkedin")
+						p.footer__copyright Copyright © 2021 . All Rights Reserved
