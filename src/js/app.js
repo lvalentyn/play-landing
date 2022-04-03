@@ -68,6 +68,22 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 		$('.slick-dots button').html('');
 	}
+	if ($('.js-reviews-slider').length) {
+		$('.js-reviews-slider').slick({
+			lazyLoad: 'ondemand',
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			autoplay: true,
+			autoplaySpeed: 5000,
+			fade: false,
+			adaptiveHeight: true,
+			swipe: false,
+			mobileFirst: true
+		});
+		$('.slick-dots button').html('');
+	}
 	// }, 2000);
 
 	// for create webP dublicate
