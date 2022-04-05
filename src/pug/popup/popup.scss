@@ -1,0 +1,123 @@
+@import '../../scss/vars';
+
+.popup {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, .7);
+
+
+
+	&__content {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		width: 90%;
+
+		padding: 40px 15px;
+		transform: translate(-50%, -50%);
+		background: url('@img/banner-bg-mob.jpg') center center/ cover no-repeat;
+	}
+
+	&__close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 20px;
+		height: 20px;
+
+		cursor: pointer;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+			width: 20px;
+			height: 2px;
+			background-color: #fff;
+		}
+
+		&::before {
+			transform: translateY(-50%) rotate(45deg);
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		padding: 10px 15px;
+		margin-bottom: 15px;
+		color: $main-color;
+		background: $bg-alt-color;
+		outline-color: $border-color;
+		outline-width: 1px;
+		border: 1px solid transparent;
+
+		transition: .3s ease;
+
+		&:last-child {
+			margin-bottom: 20px;
+		}
+
+		&::placeholder {
+			color: $sec-color;
+		}
+
+		&:hover {
+			border: 1px solid $border-color;
+		}
+	}
+
+	&__btn-box {
+		max-width: 320px;
+	}
+
+	&__link {
+		color: $main-color;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@include respond-from(to-xxs) {
+		&__btn {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include respond-from(xxs) {
+		&__content {
+			max-width: 500px;
+			padding: 40px;
+		}
+
+		&__btn-box {
+			display: flex;
+			align-items: center;
+		}
+
+		&__btn {
+			flex: 0 1 220px;
+			margin-right: 20px;
+		}
+
+	}
+}

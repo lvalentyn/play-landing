@@ -46,6 +46,8 @@ body {
 	}
 }
 
+.status {}
+
 .no-scroll {
 	overflow: hidden;
 }
@@ -167,8 +169,6 @@ form {
 		max-width: 640px;
 		margin-bottom: 20px;
 	}
-
-
 }
 
 .section-bg {
@@ -185,6 +185,12 @@ form {
 
 .no-p {
 	padding: 0 !important;
+}
+
+.status {
+	margin-top: 5px;
+	margin-left: 5px;
+	font-size: 12px;
 }
 
 @include respond-from(sm) {

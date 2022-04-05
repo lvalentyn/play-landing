@@ -1,0 +1,25 @@
+.popup.js-popup-register.js-modal
+	.popup__content
+		.popup__close
+		.popup__title Create Account
+		form.popup__form(action="/")
+			input.popup__input(type="text" name="name" placeholder="Username" required)
+			input.popup__input(type="email" name="email" placeholder="Email" required)
+			input.popup__input(type="password" name="password" placeholder="Password" required)
+			.popup__btn-box
+				button.popup__btn.btn(type="submit" name="submit") Register
+				p.popup__subtitle Have Account 
+					a.popup__link.js-login-btn(href="/" aria-label="login here") Login Here
+
+.popup.js-popup-login.js-modal
+	.popup__content
+		.popup__close
+		.popup__title sign in
+		form.popup__form(action="/")
+			input.popup__input(type="text" name="name" placeholder="Username or Email" required)
+			input.popup__input(type="password" name="password" placeholder="Password" required)
+			.popup__btn-box
+				button.popup__btn.btn.btn--alt(type="submit" name="submit") login
+				p.popup__subtitle Have Account 
+					a.popup__link.js-register-btn(href="/" aria-label="login here") Register Here
+				.status

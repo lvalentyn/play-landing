@@ -12,9 +12,9 @@ section.navbar
 					span.navbar__search-icon___
 						img(src="@img/i-loupe.png", alt="loupe")
 			.navbar__btn-box.none-to-md
-				a.navbar__btn.btn(href="/")
+				a.navbar__btn.btn.js-register-btn(href="/" aria-label="Register btn")
 					span Register
-				a.navbar__btn.btn.btn--alt(href="/")
+				a.navbar__btn.btn.btn--alt.js-login-btn(href="/" aria-label="Login btn")
 					span Login
 			.navbar__burger.js-burger-btn.none-md
 				img(src="@img/i-burger.png" alt="burgermenu")
@@ -25,7 +25,7 @@ section.navbar
 						li.navbar__el
 							a.navbar__link(href=link aria-label="menu link") #{link}
 			.navbar__btn-box.none-md
-				a.navbar__btn.btn(href="/" aria-label="Register btn")
+				a.navbar__btn.btn.js-register-btn(href="/" aria-label="Register btn")
 					span Register
-				a.navbar__btn.btn.btn--alt(href="/" aria-label="Login btn")
+				a.navbar__btn.btn.btn--alt.js-login-btn(href="/" aria-label="Login btn")
 					span Login

@@ -3,21 +3,22 @@
   <head lang="en">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="files/favicon.ico">
     <title>Play Landing</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20220404002542">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="page">
       <section class="navbar">
         <div class="container">
           <div class="navbar__row navbar__row--top">
-            <div class="navbar__logo"><a class="navbar__logo-link" href="/" aria-label="main-logo"><picture><source srcset="img/logo-mob.webp" type="image/webp"><img class="navbar__logo-img" src="img/logo-mob.png" alt="logoMob"></picture></a></div>
+            <div class="navbar__logo"><a class="navbar__logo-link" href="/" aria-label="main-logo"><img class="navbar__logo-img" src="img/logo-mob.png" alt="logoMob"></a></div>
             <form class="navbar__search none-to-md" action="">
               <input class="navbar__search-field" type="text" placeholder="Search game...">
-              <button class="navbar__search-btn" type="submit"><span class="navbar__search-icon___"><picture><source srcset="img/i-loupe.webp" type="image/webp"><img src="img/i-loupe.png" alt="loupe"></picture></span></button>
+              <button class="navbar__search-btn" type="submit"><span class="navbar__search-icon___"><img src="img/i-loupe.png" alt="loupe"></span></button>
             </form>
-            <div class="navbar__btn-box none-to-md"><a class="navbar__btn btn" href="/"><span>Register</span></a><a class="navbar__btn btn btn--alt" href="/"><span>Login</span></a></div>
-            <div class="navbar__burger js-burger-btn none-md"><picture><source srcset="img/i-burger.webp" type="image/webp"><img src="img/i-burger.png" alt="burgermenu"></picture></div>
+            <div class="navbar__btn-box none-to-md"><a class="navbar__btn btn js-register-btn" href="/" aria-label="Register btn"><span>Register</span></a><a class="navbar__btn btn btn--alt js-login-btn" href="/" aria-label="Login btn"><span>Login</span></a></div>
+            <div class="navbar__burger js-burger-btn none-md"><img src="img/i-burger.png" alt="burgermenu"></div>
           </div>
           <div class="navbar__row navbar__row--bottom js-burgermenu">
             <nav class="navbar__navigation">
@@ -31,7 +32,7 @@
                 <li class="navbar__el"><a class="navbar__link" href="secure payment" aria-label="menu link">secure payment</a></li>
               </ul>
             </nav>
-            <div class="navbar__btn-box none-md"><a class="navbar__btn btn" href="/" aria-label="Register btn"><span>Register</span></a><a class="navbar__btn btn btn--alt" href="/" aria-label="Login btn"><span>Login</span></a></div>
+            <div class="navbar__btn-box none-md"><a class="navbar__btn btn js-register-btn" href="/" aria-label="Register btn"><span>Register</span></a><a class="navbar__btn btn btn--alt js-login-btn" href="/" aria-label="Login btn"><span>Login</span></a></div>
           </div>
         </div>
       </section>
@@ -48,7 +49,7 @@
                       <p class="banner__title">horizon </p>
                       <p class="banner__subtitle">forbidden west</p>
                       <p class="banner__descr">Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.</p>
-                      <div class="banner__btn-box"><a class="banner__btn btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
+                      <div class="banner__btn-box"><a class="banner__btn btn js-register-btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
                     </div>
                   </div>
                 </div>
@@ -63,7 +64,7 @@
                       <p class="banner__title">horizon </p>
                       <p class="banner__subtitle">forbidden west</p>
                       <p class="banner__descr">Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.</p>
-                      <div class="banner__btn-box"><a class="banner__btn btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
+                      <div class="banner__btn-box"><a class="banner__btn btn js-register-btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
                     </div>
                   </div>
                 </div>
@@ -78,7 +79,7 @@
                       <p class="banner__title">horizon </p>
                       <p class="banner__subtitle">forbidden west</p>
                       <p class="banner__descr">Horizon Forbidden West is an upcoming action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment.</p>
-                      <div class="banner__btn-box"><a class="banner__btn btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
+                      <div class="banner__btn-box"><a class="banner__btn btn js-register-btn" href="/" aria-label="play-now btn"><span>play now</span></a></div>
                     </div>
                   </div>
                 </div>
@@ -88,21 +89,21 @@
         <div class="container"> 
           <div class="advantages__box">
                   <div class="advantages__card">
-                    <div class="advantages__icon"> <picture><source srcset="img/advanatges-i-fast.webp" type="image/webp"><img src="img/advanatges-i-fast.png" alt="Free Delivery"></picture></div>
+                    <div class="advantages__icon"> <img src="img/advanatges-i-fast.png" alt="Free Delivery"></div>
                     <div class="advantages__text">
                       <div class="advantages__title">Free Delivery</div>
                       <div class="advantages__descr">Free Shipping On All Order  lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
                     </div>
                   </div>
                   <div class="advantages__card">
-                    <div class="advantages__icon"> <picture><source srcset="img/advanatges-i-money.webp" type="image/webp"><img src="img/advanatges-i-money.png" alt="Free Delivery"></picture></div>
+                    <div class="advantages__icon"> <img src="img/advanatges-i-money.png" alt="Free Delivery"></div>
                     <div class="advantages__text">
                       <div class="advantages__title">Free Delivery</div>
                       <div class="advantages__descr">Back Guarantee in 7 days dolor sit amet, consectetuer adipiscing elit</div>
                     </div>
                   </div>
                   <div class="advantages__card">
-                    <div class="advantages__icon"> <picture><source srcset="img/advanatges-i-discount.webp" type="image/webp"><img src="img/advanatges-i-discount.png" alt="Member Discount"></picture></div>
+                    <div class="advantages__icon"> <img src="img/advanatges-i-discount.png" alt="Member Discount"></div>
                     <div class="advantages__text">
                       <div class="advantages__title">Member Discount</div>
                       <div class="advantages__descr">On every order over $130.00  consectetuer </div>
@@ -122,7 +123,7 @@
           <div class="games-box__content-box js-filter-content"> 
             <div class="js-game-box-slider">
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-ratchet.webp" type="image/webp"><img src="img/games-box-ratchet.jpg" alt="Ratchet &amp; Clank: Rift Apart"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-ratchet.jpg" alt="Ratchet &amp; Clank: Rift Apart">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -152,7 +153,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-horizon.webp" type="image/webp"><img src="img/games-box-horizon.jpg" alt="Horizon Forbidden West"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-horizon.jpg" alt="Horizon Forbidden West">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -182,7 +183,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-sackboy.webp" type="image/webp"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -210,7 +211,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -238,7 +239,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-sackboy.webp" type="image/webp"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -266,7 +267,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -298,7 +299,7 @@
           <div class="games-box__content-box js-filter-content"> 
             <div class="js-game-box-slider">
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-ratchet.webp" type="image/webp"><img src="img/games-box-ratchet.jpg" alt="Ratchet &amp; Clank: Rift Apart"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-ratchet.jpg" alt="Ratchet &amp; Clank: Rift Apart">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -328,7 +329,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-horizon.webp" type="image/webp"><img src="img/games-box-horizon.jpg" alt="Horizon Forbidden West"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-horizon.jpg" alt="Horizon Forbidden West">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -362,7 +363,7 @@
           <div class="games-box__content-box js-filter-content"> 
             <div class="js-game-box-slider">
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-sackboy.webp" type="image/webp"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-sackboy.jpg" alt="Sackboy: A Big Adventure">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -390,7 +391,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -418,7 +419,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -446,7 +447,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -474,7 +475,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -502,7 +503,7 @@
                         </div>
                       </div>
                       <div class="games-box__card">
-                        <div class="games-box__img-box"><picture><source srcset="img/games-box-crash.webp" type="image/webp"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time"></picture>
+                        <div class="games-box__img-box"><img src="img/games-box-crash.jpg" alt="Crash Bandicoot 4 - It's About Time">
                           <div class="games-box__hover-box"> 
                             <div class="games-box__btn-box"> <a class="games-box__btn btn btn--alt" href="/" aria-label="read-morew btn"><span>read more</span></a><a class="games-box__btn btn" href="/" aria-label="buy-now btn"><span>buy now</span></a></div>
                           </div>
@@ -544,7 +545,7 @@
                       </div>
                       <div class="container">
                         <div class="reviews__text-box">
-                          <div class="reviews__img"><picture><source srcset="img/reviews-photo.webp" type="image/webp"><img src="img/reviews-photo.jpg" alt="reviews-photo"></picture></div>
+                          <div class="reviews__img"><img src="img/reviews-photo.jpg" alt="reviews-photo"></div>
                           <p class="reviews__title">VALERIE RISH</p>
                           <p class="reviews__descr">The final scene of Horizon Zero Dawn reveals HADES has not been completely defeated. A dark entity — thought to be HADES — shoots out of a pile of rubble and is captured by Sylens, a secondary character thought to be Aloy’s ally.</p>
                           <p class="reviews__descr">He seems hungry for knowledge about the evil system’s “masters” and seems ready to stop at nothing to acquire it. He could be the main villain of Horizon Forbidden West or the catalyst for its events at the very least.</p>
@@ -559,7 +560,7 @@
                       </div>
                       <div class="container">
                         <div class="reviews__text-box">
-                          <div class="reviews__img"><picture><source srcset="img/reviews-photo.webp" type="image/webp"><img src="img/reviews-photo.jpg" alt="reviews-photo"></picture></div>
+                          <div class="reviews__img"><img src="img/reviews-photo.jpg" alt="reviews-photo"></div>
                           <p class="reviews__title">VALERIE RISH</p>
                           <p class="reviews__descr">The final scene of Horizon Zero Dawn reveals HADES has not been completely defeated. A dark entity — thought to be HADES — shoots out of a pile of rubble and is captured by Sylens, a secondary character thought to be Aloy’s ally.</p>
                           <p class="reviews__descr">He seems hungry for knowledge about the evil system’s “masters” and seems ready to stop at nothing to acquire it. He could be the main villain of Horizon Forbidden West or the catalyst for its events at the very least.</p>
@@ -574,7 +575,7 @@
                       </div>
                       <div class="container">
                         <div class="reviews__text-box">
-                          <div class="reviews__img"><picture><source srcset="img/reviews-photo.webp" type="image/webp"><img src="img/reviews-photo.jpg" alt="reviews-photo"></picture></div>
+                          <div class="reviews__img"><img src="img/reviews-photo.jpg" alt="reviews-photo"></div>
                           <p class="reviews__title">VALERIE RISH</p>
                           <p class="reviews__descr">The final scene of Horizon Zero Dawn reveals HADES has not been completely defeated. A dark entity — thought to be HADES — shoots out of a pile of rubble and is captured by Sylens, a secondary character thought to be Aloy’s ally.</p>
                           <p class="reviews__descr">He seems hungry for knowledge about the evil system’s “masters” and seems ready to stop at nothing to acquire it. He could be the main villain of Horizon Forbidden West or the catalyst for its events at the very least.</p>
@@ -587,13 +588,13 @@
       <div class="section-bg p-t-b"> 
         <div class="columns container container--bg">
           <main class="columns__item">
-            <div class="text-box"><picture><source srcset="img/text-img-1.webp" type="image/webp"><img src="img/text-img-1.jpg" alt="text-img"></picture>
+            <div class="text-box"><img src="img/text-img-1.jpg" alt="text-img">
               <h2 class="h2">A few words about us</h2>
               <p>One of the Playstation’s biggest game expected to be released on the PlayStation 5 in 2021 is Horizon Forbidden West, a sequel to Guerilla Games' open-world sci-fi game from 2017. Sony Interactive Entertainment has continued to pull back the curtain on the long-awaited sequel where Aloy's adventure continues. This is everything that you'd want to know about the game, including its release window, platforms, and story details.</p>
               <p>SIE and Guerrilla gave gamers their first in-depth look at the upcoming open-world title during a PS5 reveal event on June 11.</p><a class="btn btn--alt" href="/" aria-label="learn more">learn more </a>
               <p>Leading up to those colossal announcements, Guerrilla had teased the sequel's existence with a handful of mysterious job openings and even a few accidental social media posts. But now the title has been confirmed as an early release to show off the technical capabilities of the PS5 by continuing Aloy's critically acclaimed storyline.</p>
               <h3 class="h3">What could the Horizon Forbidden West story be about?</h3>
-              <p>Gamers play as Aloy, a member of one of many warring tribes that stumbles upon the origins of the mechanical beasts the rule the world. They were created by a company named Faro Automated Solutions, nearly 1,000 ago as “peacemakers,” but need biomass for fuel. Eventually, they consumed so much of the Earth’s biosphere that it eradicated most humans. But there was a Plan B.</p><picture><source srcset="img/text-img-2.webp" type="image/webp"><img class="float-right" src="img/text-img-2.jpg" alt="text-img"></picture>
+              <p>Gamers play as Aloy, a member of one of many warring tribes that stumbles upon the origins of the mechanical beasts the rule the world. They were created by a company named Faro Automated Solutions, nearly 1,000 ago as “peacemakers,” but need biomass for fuel. Eventually, they consumed so much of the Earth’s biosphere that it eradicated most humans. But there was a Plan B.</p><img class="float-right" src="img/text-img-2.jpg" alt="text-img">
               <h2 class="h2">Game Features</h2>
               <ul> 
                 <li>Faro also created an artificial intelligence named GAIA, that could shut down </li>
@@ -643,7 +644,7 @@
                   <div class="deal__item"><span id="mins">56</span><span>mins</span></div>
                   <div class="deal__item"><span id="secs">20</span><span>secs</span></div>
                 </div>
-                <div class="deal__btn-box"><a class="deal__btn btn" href="/" aria-label="buy-now btn"><span>but now</span></a></div>
+                <div class="deal__btn-box"><a class="deal__btn btn js-register-btn" href="/" aria-label="buy-now btn"><span>but now</span></a></div>
               </section>
             </div>
           </aside>
@@ -668,11 +669,11 @@
             <div class="footer__col">
               <div class="footer__title footer__title--accordion js-accordion-btn">Contact INFO & PAYMENT</div>
               <div class="footer__descr footer__descr--accordion"><a class="footer__contact-link" href="/" aria-label="location link">
-                  <div class="footer__icon"><picture><source srcset="img/footer-i-location.webp" type="image/webp"><img src="img/footer-i-location.png" alt="location"></picture></div>
+                  <div class="footer__icon"><img src="img/footer-i-location.png" alt="location"></div>
                   <div class="footer__contact">Game Store 507-Union Trade ipsum Doler Centre UK</div></a><a class="footer__contact-link" href="tel:+387897897897" aria-label="phone link">
-                  <div class="footer__icon"><picture><source srcset="img/footer-i-phone.webp" type="image/webp"><img src="img/footer-i-phone.png" alt="phone"></picture></div>
+                  <div class="footer__icon"><img src="img/footer-i-phone.png" alt="phone"></div>
                   <div class="footer__contact">+38 789-789-7897</div></a><a class="footer__contact-link" href="mailto:sales@yourcompany.com" aria-label="e-mail link">
-                  <div class="footer__icon"><picture><source srcset="img/footer-i-email.webp" type="image/webp"><img src="img/footer-i-email.png" alt="email"></picture></div>
+                  <div class="footer__icon"><img src="img/footer-i-email.png" alt="email"></div>
                   <div class="footer__contact">sales@yourcompany.com		</div></a></div>
             </div>
             <div class="footer__col">
@@ -684,7 +685,7 @@
                   <button class="footer__btn btn" type="submit">subscribe</button>
                 </form>
                 <div class="footer__wrap"> 
-                  <div class="footer__social"><a class="footer__social-icon" href="/" aria-label="menu link"><picture><source srcset="img/footer-i-facebook.webp" type="image/webp"><img src="img/footer-i-facebook.png" alt="facebook"></picture></a><a class="footer__social-icon" href="/" aria-label="menu link"><img src="img/footer-i-twitter.png" alt="twitter"></a><a class="footer__social-icon" href="/" aria-label="menu link"><img src="img/footer-i-linkedin.png" alt="linkedin"></a></div>
+                  <div class="footer__social"><a class="footer__social-icon" href="/" aria-label="menu link"><img src="img/footer-i-facebook.png" alt="facebook"></a><a class="footer__social-icon" href="/" aria-label="menu link"><img src="img/footer-i-twitter.png" alt="twitter"></a><a class="footer__social-icon" href="/" aria-label="menu link"><img src="img/footer-i-linkedin.png" alt="linkedin"></a></div>
                   <p class="footer__copyright">Copyright © 2021 . All Rights Reserved</p>
                 </div>
               </div>
@@ -692,7 +693,37 @@
           </div>
         </div>
       </footer>
+      <div class="popup js-popup-register js-modal">
+        <div class="popup__content">
+          <div class="popup__close"></div>
+          <div class="popup__title">Create Account</div>
+          <form class="popup__form" action="/">
+            <input class="popup__input" type="text" name="name" placeholder="Username" required>
+            <input class="popup__input" type="email" name="email" placeholder="Email" required>
+            <input class="popup__input" type="password" name="password" placeholder="Password" required>
+            <div class="popup__btn-box">
+              <button class="popup__btn btn" type="submit" name="submit">Register</button>
+              <p class="popup__subtitle">Have Account <a class="popup__link js-login-btn" href="/" aria-label="login here">Login Here</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup js-popup-login js-modal">
+        <div class="popup__content">
+          <div class="popup__close"></div>
+          <div class="popup__title">sign in</div>
+          <form class="popup__form" action="/">
+            <input class="popup__input" type="text" name="name" placeholder="Username or Email" required>
+            <input class="popup__input" type="password" name="password" placeholder="Password" required>
+            <div class="popup__btn-box">
+              <button class="popup__btn btn btn--alt" type="submit" name="submit">login</button>
+              <p class="popup__subtitle">Have Account <a class="popup__link js-register-btn" href="/" aria-label="login here">Register Here</a></p>
+              <div class="status"></div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <script src="js/app.min.js?_v=20220404002542"> </script>
+    <script src="js/app.min.js"> </script>
   </body>
 </html>
