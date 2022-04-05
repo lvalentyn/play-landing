@@ -5,6 +5,7 @@ import timer from "./modules/timer.js";
 import accordion from "./modules/accordion.js";
 import modals from "./modules/modals.js";
 import forms from "./modules/forms.js";
+import smoothScrolling from "./modules/smoothScrolling.js";
 import slick from 'slick-carousel';
 import $ from "jquery";
 // plugins from npm
@@ -13,8 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	'use strict';
 
 	// my modules
+	smoothScrolling();
 	filter();
-	timer();
+	timer('.js-timer', '2022-08-10');
 	modals();
 	forms();
 	accordion('.js-accordion-btn');

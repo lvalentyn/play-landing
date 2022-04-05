@@ -1,4 +1,4 @@
-- const menuList =['home', 'about', 'games', 'news', 'contacts', `terms and conditions of use`, 'secure payment']
+- const menuList =['home', 'about', 'games', 'news']
 
 section.navbar
 	.container
@@ -23,7 +23,13 @@ section.navbar
 				ul.navbar__list
 					each link in menuList
 						li.navbar__el
-							a.navbar__link(href=link aria-label="menu link") #{link}
+							a.navbar__link(href=`#${link}` aria-label="menu link") #{link}
+					li.navbar__el
+							a.navbar__link(href=`#footer` aria-label="menu link") contacts
+					li.navbar__el
+							a.navbar__link(href=`#footer` aria-label="menu link") terms and conditions of use
+					li.navbar__el
+							a.navbar__link(href=`#footer` aria-label="menu link") secure payment
 			.navbar__btn-box.none-md
 				a.navbar__btn.btn.js-register-btn(href="/" aria-label="Register btn")
 					span Register

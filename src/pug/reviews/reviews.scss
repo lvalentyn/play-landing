@@ -1,6 +1,12 @@
 @import '../../scss/vars';
 
 .reviews {
+	background-image: url('@img/reviews-bg-mob.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
 	&__slider {
 		position: relative;
 
@@ -61,6 +67,7 @@
 	}
 
 	&__bg {
+		display: none;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -99,6 +106,7 @@
 	}
 
 	@include respond-from(xxs) {
+		background-image: url('@img/reviews-bg.jpg');
 
 		&__text-box {
 			margin: 0 auto;

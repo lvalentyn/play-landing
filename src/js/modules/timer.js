@@ -1,12 +1,20 @@
-const timer = () => {
-	// Timer footer
-	const deadline = '2022-08-10';
-	function getTimeRemaining(endtime) {
+const timer = (id, deadline) => {
+
+	const addZero = (num) => {
+		if (num <= 9) {
+			return '0' + num;
+		} else {
+			return num;
+		}
+	};
+
+	const getTimeRemaining = (endtime) => {
 		const t = Date.parse(endtime) - Date.parse(new Date()),
-			days = Math.floor(t / (1000 * 60 * 60 * 24)),
-			hours = Math.floor((t / 1000 * 60 * 60) % 24),
+			seconds = Math.floor((t / 1000) % 60),
 			minutes = Math.floor((t / 1000 / 60) % 60),
-			seconds = Math.floor((t / 1000) % 60);
+			hours = Math.floor((t / (1000 * 60 * 60)) % 24),
+			days = Math.floor((t / (1000 * 60 * 60 * 24)));
+
 		return {
 			'total': t,
 			'days': days,
@@ -14,34 +22,39 @@ const timer = () => {
 			'minutes': minutes,
 			'seconds': seconds
 		};
-	}
-	function getZero(num) {
-		if (num >= 0 && num < 10) {
-			return `0${num}`
-		} else {
-			return num;
-		}
-	}
-	function setClock(selector, endtime) {
+	};
+
+	const setClock = (selector, endtime) => {
 		const timer = document.querySelector(selector),
 			days = timer.querySelector('#days'),
 			hours = timer.querySelector('#hours'),
 			minutes = timer.querySelector('#mins'),
 			seconds = timer.querySelector('#secs'),
 			timeInterval = setInterval(updateClock, 1000);
+
 		updateClock();
+
 		function updateClock() {
 			const t = getTimeRemaining(endtime);
-			days.innerHTML = getZero(t.days);
-			hours.innerHTML = getZero(t.hours);
-			minutes.innerHTML = getZero(t.minutes);
-			seconds.innerHTML = getZero(t.seconds);
+
+			days.textContent = addZero(t.days);
+			hours.textContent = addZero(t.hours);
+			minutes.textContent = addZero(t.minutes);
+			seconds.textContent = addZero(t.seconds);
+
 			if (t.total <= 0) {
+				days.textContent = "00";
+				hours.textContent = "00";
+				minutes.textContent = "00";
+				seconds.textContent = "00";
+
 				clearInterval(timeInterval);
 			}
 		}
-	}
-	setClock('.deal__timer', deadline);
-}
+	};
+
+	setClock(id, deadline);
+
+};
 
 export default timer;
